@@ -1,0 +1,109 @@
+.hacker-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002c3e;
+  height: 100vh;
+  position: relative; }
+  .hacker-panel button.initiate-hack {
+    border: 2px solid #78f042;
+    padding: 1em 3em;
+    background-color: transparent;
+    color: #78f042;
+    font-size: 20px;
+    outline: none;
+    transition: background-color .5s, border .2s;
+    border-bottom: 5px solid black; }
+    .hacker-panel button.initiate-hack:hover {
+      cursor: crosshair;
+      background-color: #78f042;
+      color: #002c3e;
+      border-bottom: 2px solid black; }
+  .hacker-panel .picture-panel {
+    display: none;
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    z-index: 999; }
+    .hacker-panel .picture-panel .panel-head {
+      padding: .4em .5em;
+      background-color: #001a25;
+      color: #78f042; }
+    .hacker-panel .picture-panel .panel-body {
+      position: relative; }
+      .hacker-panel .picture-panel .panel-body [id^="pic-"] {
+        display: none; }
+    .hacker-panel .picture-panel .scan-row {
+      position: absolute;
+      width: 120%;
+      height: 2px;
+      margin-left: -10%;
+      background-color: #78f042;
+      animation: scanUpDown 4.4s 2; }
+  .hacker-panel .code-panel {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    min-width: 300px; }
+    .hacker-panel .code-panel .panel-head {
+      background-color: #001a25;
+      color: #78f042;
+      padding: .4em .5em; }
+    .hacker-panel .code-panel .panel-body {
+      background-color: black;
+      color: white;
+      padding: .2em .5em;
+      max-height: 300px; }
+  .hacker-panel .res-panel {
+    display: none;
+    font-size: 20px;
+    z-index: 9999;
+    opacity: .8;
+    color: #78f042;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: #001a25;
+    border-top: 4px solid #00080b;
+    padding: 10px; }
+    .hacker-panel .res-panel ul, .hacker-panel .res-panel li {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .hacker-panel .res-panel ul span, .hacker-panel .res-panel li span {
+        color: red;
+        display: none; }
+
+.digit, .digitii {
+  position: absolute;
+  top: 0;
+  animation: slowDescend 20s;
+  color: #78f042;
+  font-size: 16px;
+  font-weight: bold; }
+
+.digit {
+  left: 25%; }
+
+.digitii {
+  right: 25%; }
+
+@keyframes slowDescend {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(0, 600px); } }
+@keyframes scanUpDown {
+  0% {
+    top: 0; }
+  50% {
+    top: 100%; }
+  100% {
+    top: 0; } }
+body {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=style.css.map */
